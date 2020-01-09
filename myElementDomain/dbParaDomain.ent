@@ -1,0 +1,12 @@
+<!-- ====================================================
+     DocBook-like Paragraph Domain Module
+    
+     Author: your name here
+
+     Copyright (c) 2019 copyright holder
+     
+     license to use or not use or whatever
+          
+     ==================================================== -->
+     
+<!ENTITY % dbPara-d-p "para" >

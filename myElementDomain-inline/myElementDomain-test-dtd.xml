@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE concept SYSTEM "concept.dtd">
+<concept id="topicid">
+	<title>Test concept</title>
+	<conbody>
+		<para>Hello!</para>
+		<para>Hello. This is a <wordasword>wordasword</wordasword>.</para>
+	</conbody>
+</concept>
