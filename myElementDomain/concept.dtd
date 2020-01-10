@@ -140,7 +140,8 @@
                          %pr-d-keyword; |
                          %sw-d-keyword; |
                          %ui-d-keyword; |
-                         %xml-d-keyword;
+                         %xml-d-keyword; |
+                         %dbPara-d-keyword;
                         ">
 <!ENTITY % pre          "pre |
                          %pr-d-pre; |
