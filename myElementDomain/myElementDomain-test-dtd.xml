@@ -3,8 +3,7 @@
 <concept id="topicid">
 	<title>Test concept</title>
 	<conbody>
-		<para>Hello!</para>
-		<para>Hello. This is a <wordasword>wordasword</wordasword>.</para>
-		<p>This is another DITA paragraph, a <xmlelement>p</xmlelement>. It can contain a <wordasword>wordasword</wordasword>.</p>
+		<para>The word <wordasword>brown</wordasword> can have several meanings.</para>
+		<p>This DITA paragraph can use the new element too: <wordasword>see</wordasword>?</p>
 	</conbody>
 </concept>
