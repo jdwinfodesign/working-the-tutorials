@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic id="topic-id" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/topic.xsd">
+	<title>Test topic</title>
+	<body>
+		<p>DITA <xmlelement>p</xmlelement> element.</p>
+		<para>A new <xmlelement>para</xmlelement> element containing a <wordasword>wordasword</wordasword>.</para>
+	</body>
+</topic>
