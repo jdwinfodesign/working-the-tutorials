@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="rng/concept.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<concept id="concept-1">
+	<title>Test concept</title>
+	<conbody>
+		<p>Test concept.</p>
+		<para>A DocBook-like <wordasword>paragraph</wordasword>.</para>
+	</conbody>
+</concept>
