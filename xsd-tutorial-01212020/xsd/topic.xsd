@@ -7,7 +7,6 @@
 	attributeFormDefault="unqualified">
 	<!-- ================ TOPIC DOMAINS ===================== -->
 	<xs:include schemaLocation="dbParaDomain.xsd"/>
-<!--	<xs:include schemaLocation="urn:pubid:example.org:doctypes:dita:modules:dbParaDomain"/>-->
 
 	<xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd:1.3"/>
 	<xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:deliveryTargetAttDomain.xsd:1.3"/>

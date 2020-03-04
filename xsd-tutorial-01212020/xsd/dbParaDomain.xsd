@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:group name="dbPara-d-p">
+		<xs:choice>
+			<xs:element ref="para"/>
+		</xs:choice>
+	</xs:group>
+	
+	<xs:element name="para">
+		<xs:annotation>
+			<xs:documentation>A paragraph element (&lt;p&gt;) is a block of text containing a single main idea. Category: Body elements</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="para.class">
+					<xs:attribute ref="class" default="+ topic/p dbPara-d/para "/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="para.class" mixed="true">
+		<xs:sequence>
+			<xs:group ref="para.content"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="para.attributes"/>
+	</xs:complexType>
+	<xs:group name="para.content">
+		<xs:sequence>
+			<xs:group ref="para.cnt" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:attributeGroup name="para.attributes">
+		<xs:attributeGroup ref="univ-atts"/>
+		<xs:attribute name="outputclass" type="xs:string"/>
+		<xs:attributeGroup ref="global-atts"/>
+	</xs:attributeGroup>
+	
+	<xs:group name="dbPara-d-keyword">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="wordasword"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	
+	<xs:element name="wordasword">
+		<xs:annotation>
+			<xs:documentation>The &lt;wordasword&gt; element identifies a wordasword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key
+				for a message. Category: Body elements</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="wordasword.class">
+					<xs:attribute ref="class" default="+ topic/keyword dbPara-d/wordasword "/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="wordasword.class" mixed="true">
+		<xs:sequence>
+			<xs:group ref="wordasword.content"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="wordasword.attributes"/>
+	</xs:complexType>
+	<xs:group name="wordasword.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="draft-comment"/>
+				<xs:group ref="required-cleanup"/>
+				<xs:group ref="text"/>
+				<xs:group ref="tm"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:attributeGroup name="wordasword.attributes">
+		<xs:attribute name="keyref" type="xs:string"/>
+		<xs:attributeGroup ref="univ-atts"/>
+		<xs:attribute name="outputclass" type="xs:string"/>
+		<xs:attributeGroup ref="global-atts"/>
+	</xs:attributeGroup>
+	
+	
+</xs:schema>
