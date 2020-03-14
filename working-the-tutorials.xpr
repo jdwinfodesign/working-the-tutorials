@@ -8,12 +8,12 @@
                     <entry>
                         <String>catalogs.v5</String>
                         <String-array>
-                            <String>file:/C:/Users/jdwin/Documents/2019/professional/dita-specialization-tutorials/dita-ot-3.3.4/catalog-dita.xml</String>
+                            <String>file:/C:/Users/jdwin/Documents/2019/professional/OT-4-dev/DITA-OT/dita-ot-3.3.4/catalog-dita.xml</String>
                         </String-array>
                     </entry>
                     <entry>
                         <String>dita.ot.directory</String>
-                        <String>C:\Users\jdwin\Documents\2019\professional\dita-specialization-tutorials\working-the-tutorials\dita-ot-3.3.4</String>
+                        <String>C:\Users\jdwin\Documents\2019\professional\OT-4-dev\DITA-OT\dita-ot-3.3.4</String>
                     </entry>
                     <entry>
                         <String>key.dita.option.pane</String>
@@ -33,5 +33,6 @@
     </meta>
     <projectTree name="working-the-tutorials.xpr">
         <folder path="."/>
+        <file name="dita-ot-3.3.4/plugins/org.oasis-open.dita.v1_3/rng/base/rng/commonElementsMod.rng"/>
     </projectTree>
 </project>

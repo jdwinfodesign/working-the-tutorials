@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="myConcept.xsd" id="concept-1">
+	<title/>
+	<shortdesc/>
+	<conbody>
+		<para><wordasword>Hello</wordasword>.</para>
+		<p><wordasword>Hello</wordasword>.</p>
+	</conbody>
+</concept>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="topic-with-highlight-constraint.xsd" id="topic-1">
+	<title>Test of Paragraph Constraint</title>
+	<body>
+		<p>Allowed: <i>i</i>, <b>b</b>, and <u>u</u>. Not allowed: <keyword>keyword</keyword></p>
+	</body>
+</topic>
