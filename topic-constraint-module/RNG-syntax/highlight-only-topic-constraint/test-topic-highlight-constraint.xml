@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="topic-with-highlight-constraint.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<topic id="topic-1">
+	<title>Test of Paragraph Constraint</title>
+	<body>
+			<p>Allowed: <i>i</i>, <b>b</b>, and <u>u</u>. Not allowed: <keyword>keyword</keyword>.</p>
+	</body>
+</topic>
