@@ -1,0 +1,9 @@
+<!ENTITY % phase-of-moon-d-attribute 
+  "phase-of-moon 
+    CDATA 
+    #IMPLIED
+  "
+>
+<!ENTITY phase-of-moon-d-att
+   "a(props  phase-of-moon)"
+>
