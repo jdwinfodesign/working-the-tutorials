@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE topic SYSTEM "myTopic.dtd">
-<topic id="topic-1">
+<topic id="topic-id" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="./topic.xsd">
 	<title>Topic title</title>
 	<body>
 		<para phase-of-moon="full">The word <wordasword>brown</wordasword> can have several meanings.</para>
