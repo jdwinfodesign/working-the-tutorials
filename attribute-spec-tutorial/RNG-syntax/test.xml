@@ -3,7 +3,9 @@
 <topic id="topic-1">
 	<title>Topic title</title>
 	<body>
-		<p>Topic paragraph</p>
-		<para>This is a <wordasword>para</wordasword>.</para>
+		<p>Topic paragraph.</p>
+		<p>Topic paragraph.</p>
+		<p>Test concept.</p>
+		<para phase-of-moon="waxing">A DocBook-like <wordasword>paragraph</wordasword>.</para>
 	</body>
 </topic>

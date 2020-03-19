@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic SYSTEM "myTopic.dtd">
+<topic id="topic-1">
+	<title>Topic title</title>
+	<body>
+		<para phase-of-moon="full">The word <wordasword>brown</wordasword> can have several meanings.</para>
+		<p>This DITA paragraph can use the new element too: <wordasword>see</wordasword>?</p>
+	</body>
+</topic>

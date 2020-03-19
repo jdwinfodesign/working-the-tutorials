@@ -134,7 +134,7 @@
 
    <xs:include schemaLocation="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.3"/>
 	
-	<xs:include schemaLocation="constrainPara.xsd" />
+	<xs:include schemaLocation="highlightOnlyPConstraints.xsd" />
 	
    <!--  ================ INFO-TYPES DEFINITION =====================  -->
    <xs:group name="info-types">

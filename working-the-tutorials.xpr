@@ -8,12 +8,12 @@
                     <entry>
                         <String>catalogs.v5</String>
                         <String-array>
-                            <String>file:/C:/Users/jdwin/Documents/2019/professional/OT-4-dev/DITA-OT/dita-ot-3.3.4/catalog-dita.xml</String>
+                            <String>file:/C:/Users/jdwin/Documents/2020/dita-specialization-tutorials/working-the-tutorials/dita-ot-3.3.4/catalog-dita.xml</String>
                         </String-array>
                     </entry>
                     <entry>
                         <String>dita.ot.directory</String>
-                        <String>C:\Users\jdwin\Documents\2019\professional\OT-4-dev\DITA-OT\dita-ot-3.3.4</String>
+                        <String>C:\Users\jdwin\Documents\2020\dita-specialization-tutorials\working-the-tutorials\dita-ot-3.3.4</String>
                     </entry>
                     <entry>
                         <String>key.dita.option.pane</String>
@@ -22,6 +22,189 @@
                     <entry>
                         <String>key.xml.catalog.option.pane</String>
                         <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>scenario.associations</String>
+                        <scenarioAssociation-array>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>package-plugin/mytopic-test-dtd.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Run DITA-OT Integrator - Copy</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                        </scenarioAssociation-array>
+                    </entry>
+                    <entry>
+                        <String>scenarios</String>
+                        <scenario-array>
+                            <antScenario>
+                                <field name="additionalAntArgs">
+                                    <String></String>
+                                </field>
+                                <field name="buildTarget">
+                                    <String></String>
+                                </field>
+                                <field name="buildFilePath">
+                                    <String>${configured.ditaot.dir}/integrator.xml</String>
+                                </field>
+                                <field name="ditaParams">
+                                    <list>
+                                        <antParameter>
+                                            <field name="name">
+                                                <String>strict</String>
+                                            </field>
+                                            <field name="description">
+                                                <String></String>
+                                            </field>
+                                            <field name="value">
+                                                <String>true</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <null/>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>5</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
+                                    </list>
+                                </field>
+                                <field name="jvmArgs">
+                                    <String>-Xmx256m</String>
+                                </field>
+                                <field name="useCustomJavaHome">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="customJavaHomeDir">
+                                    <String></String>
+                                </field>
+                                <field name="useCustomANTHome">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="customANTHomeDir">
+                                    <String></String>
+                                </field>
+                                <field name="workingDir">
+                                    <String>${pd}/dita-ot-3.3.4</String>
+                                </field>
+                                <field name="showConsoleAlways">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="advancedOptionsMap">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>Run DITA-OT Integrator - Copy</String>
+                                </field>
+                                <field name="baseURL">
+                                    <null/>
+                                </field>
+                                <field name="footerURL">
+                                    <null/>
+                                </field>
+                                <field name="fOPMethod">
+                                    <null/>
+                                </field>
+                                <field name="fOProcessorName">
+                                    <null/>
+                                </field>
+                                <field name="headerURL">
+                                    <null/>
+                                </field>
+                                <field name="inputXSLURL">
+                                    <null/>
+                                </field>
+                                <field name="inputXMLURL">
+                                    <null/>
+                                </field>
+                                <field name="defaultScenario">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="isFOPPerforming">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="type">
+                                    <String>ANT</String>
+                                </field>
+                                <field name="saveAs">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="openInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="outputResource">
+                                    <null/>
+                                </field>
+                                <field name="openOtherLocationInBrowser">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="locationToOpenInBrowserURL">
+                                    <String></String>
+                                </field>
+                                <field name="openInEditor">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInHTMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInXMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInSVGPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInResultSetPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useXSLTInput">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="xsltParams">
+                                    <list/>
+                                </field>
+                                <field name="cascadingStylesheets">
+                                    <String-array/>
+                                </field>
+                                <field name="xslTransformer">
+                                    <String>ANT</String>
+                                </field>
+                                <field name="extensionURLs">
+                                    <String-array>
+                                        <String>${configured.ditaot.dir.url}/config/</String>
+                                        <String>${oxygenHome}/classes/</String>
+                                        <String>${oxygenHome}/lib/oxygen.jar</String>
+                                        <String>${oxygenHome}/lib/oxygenAuthor.jar</String>
+                                        <String>${oxygenHome}/lib/oxygenDeveloper.jar</String>
+                                        <String>${oxygenHome}/lib/oxygenEclipse.jar</String>
+                                        <String>${oxygenHome}/lib/oxygenAuthorEclipse.jar</String>
+                                        <String>${oxygenHome}/lib/oxygenDeveloperEclipse.jar</String>
+                                        <String>${oxygenHome}/lib/oxygen-basic-utilities.jar</String>
+                                        <String>${oxygenHome}/lib/oxygen-editor-variables-parser.jar</String>
+                                        <String>${oxygenHome}/lib/*resolver*.jar</String>
+                                        <String>${oxygenHome}/lib/xml-apis.jar</String>
+                                        <String>${oxygenHome}/lib/*xerces*.jar</String>
+                                        <String>${oxygenHome}/lib/*saxon*9*.jar</String>
+                                        <String>${oxygenHome}/lib/log4j.jar</String>
+                                        <String>${configured.ditaot.dir.url}/plugins/com.oxygenxml.dost.patches/lib/*.jar</String>
+                                        <String>${configured.ditaot.dir.url}/lib/*.jar</String>
+                                    </String-array>
+                                </field>
+                            </antScenario>
+                        </scenario-array>
                     </entry>
                     <entry>
                         <String>use.default.catalog</String>
@@ -33,6 +216,5 @@
     </meta>
     <projectTree name="working-the-tutorials.xpr">
         <folder path="."/>
-        <file name="dita-ot-3.3.4/plugins/org.oasis-open.dita.v1_3/rng/base/rng/commonElementsMod.rng"/>
     </projectTree>
 </project>

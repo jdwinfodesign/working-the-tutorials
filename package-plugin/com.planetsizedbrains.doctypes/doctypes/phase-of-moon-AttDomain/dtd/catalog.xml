@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+	prefer="public">  
+	
+	<public publicId="urn:pubid:planetsizedbrains.com:entities:dtd:dita:phase-of-moonAttDomain:entities"
+		uri="phase-of-moonAttDomain.ent"/>
+	
+	<system systemId="urn:pubid:planetsizedbrains.com:entities:dtd:dita:phase-of-moon-AttDomain.ent"
+		uri="phase-of-moonAttDomain.ent"/>
+	
+</catalog>

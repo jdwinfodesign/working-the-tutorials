@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+	<xs:attributeGroup name="phase-of-moon-d-attribute">
+		<xs:attribute name="phase-of-moon" type="xs:string"/>
+	</xs:attributeGroup>
+</xs:schema>

@@ -1,0 +1,26 @@
+<!-- ====================================================
+     DocBook-like Paragraph Domain Module
+    
+     Author: your name here
+
+     Copyright (c) 2019 copyright holder
+     
+     license to use or not use or whatever
+          
+     ==================================================== -->
+     
+<!-- ============================================================= -->
+<!--                    ELEMENT EXTENSION ENTITY DECLARATIONS      -->
+<!-- ============================================================= -->
+
+<!ENTITY % dbPara-d-p       "para" >
+
+<!ENTITY % dbPara-d-keyword "wordasword" >
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY dbPara-d-att
+  "(topic dbPara-d)"
+>
