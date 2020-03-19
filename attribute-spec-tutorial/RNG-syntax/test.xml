@@ -6,6 +6,6 @@
 		<p>Topic paragraph.</p>
 		<p>Topic paragraph.</p>
 		<p>Test concept.</p>
-		<para>A DocBook-like <wordasword>paragraph</wordasword>.</para>
+		<para phase-of-moon="waxing">A DocBook-like <wordasword>paragraph</wordasword>.</para>
 	</body>
 </topic>

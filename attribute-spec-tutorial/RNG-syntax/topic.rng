@@ -46,7 +46,8 @@
                           (topic relmgmt-d)
                           (topic svg-d)
                           (topic ut-d)
-                          a(props deliveryTarget)"
+                          a(props deliveryTarget)
+                          a(props phase-of-moon)"
         />
       </optional>
     </define>
@@ -54,6 +55,7 @@
 
   <div>
     <a:documentation>INCLUDE MODULES</a:documentation>
+  	<include href="phase-of-moonAttDomain.rng"/>
   	<include href="dbParaDomain.rng"/>
   	<include href="urn:oasis:names:tc:dita:rng:topicMod.rng">
   		<define name="topic-info-types">
