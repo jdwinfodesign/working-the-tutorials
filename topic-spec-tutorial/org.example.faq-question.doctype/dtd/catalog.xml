@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+	
+	<public publicId="urn:pubid:example.org:doctypes:dita:modules:entities:faq-question"
+		uri="faq-question.ent"
+	/>
+	
+	<public publicId="urn:pubid:example.org:doctypes:dita:modules:faq-question"
+		uri="faq-question.mod"
+	/>
+	
+	<public publicId="urn:pubid:example.org:doctypes:dita:faq-question"
+		uri="faq-question.dtd"
+	/>
+	
+</catalog>
