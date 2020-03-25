@@ -1,9 +1,12 @@
 <?xml version="1.0"?>          
-<!DOCTYPE faq-question SYSTEM "dtd/faq-question.dtd">          
+<!DOCTYPE faq-question 
+  PUBLIC "urn:pubid:example.org:doctypes:dita:faq-question" 
+         "bogus"
+>          
 <faq-question id="question-id">
 	<faq-question-statement>Can I add attributes to specific element types?</faq-question-statement>
 	<faq-answer >
-		<p>No, you can only define global attributes, specialized either from &lt;base&gt;
+		<p>No, you can only define global attributes, specialized either from @ase
 			or @props.</p>
 	</faq-answer>
 </faq-question>
