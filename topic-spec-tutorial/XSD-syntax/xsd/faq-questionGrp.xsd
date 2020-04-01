@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--=============================================================-->
+<!--                   HEADER                                    -->
+<!--=============================================================-->
+<!--                                                             -->
+<!--=============================================================-->
+<xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:group name="faq-question">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="faq-question"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	
+	<xs:group name="faq-answer-details">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="faq-answer-details"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	
+	<xs:group name="faq-short-answer">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="faq-short-answer"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	
+	<xs:group name="faq-question-statement">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="faq-question-statement"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	
+<!--   <xs:group name="conbodydiv">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element ref="conbodydiv"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:group>-->
+</xs:schema>

@@ -7,10 +7,11 @@
 <!--                   ELEMENT NAME ENTITIES                       -->
 <!-- ============================================================= -->
 
-<!ENTITY % faq-question     "faq-question"                                     >
-<!ENTITY % faq-answer     "faq-answer"                                     >
-<!ENTITY % faq-question-statement "faq-question-statement" >
-<!--<!ENTITY % conbodydiv  "conbodydiv"                                  >-->
+<!ENTITY % faq-question           "faq-question"                     >
+<!ENTITY % faq-short-answer       "faq-short-answer"                 >
+<!ENTITY % faq-answer-details     "faq-answer-details"               >
+<!ENTITY % faq-question-statement "faq-question-statement"           >
+<!--<!ENTITY % conbodydiv  "conbodydiv"                           >-->
 
 <!-- ============================================================= -->
 <!--                    ELEMENT DECLARATIONS                       -->
@@ -23,10 +24,9 @@
 <!ENTITY % faq-question.content
                        "((%faq-question-statement;),
                          (%titlealts;)?,
-                         (%abstract; |
-                          %shortdesc;)?,
+                         (%faq-short-answer;),
                          (%prolog;)?,
-                         (%faq-answer;)?,
+                         (%faq-answer-details;)?,
                          (%related-links;)?,
                          (%faq-question-info-types;)*)"
 >
@@ -51,12 +51,12 @@
 
 
 <!--                    LONG NAME: FAQ answer details         -->
-<!ENTITY % faq-answer.content
+<!ENTITY % faq-answer-details.content
                        "((%body.cnt;)*,
                          (%section; |
                           %example;)*)"
 >
-<!ENTITY % faq-answer.attributes
+<!ENTITY % faq-answer-details.attributes
               "%id-atts;
                %localization-atts;
                base
@@ -67,8 +67,24 @@
                           CDATA
                                     #IMPLIED"
 >
-<!ELEMENT  faq-answer %faq-answer.content;>
-<!ATTLIST  faq-answer %faq-answer.attributes;>
+<!ELEMENT  faq-answer-details %faq-answer-details.content;>
+<!ATTLIST  faq-answer-details %faq-answer-details.attributes;>
+
+<!--                    LONG NAME: FAQ Short Answer -->
+<!ENTITY % faq-short-answer.content
+                       "(%title.cnt; |
+                         %xref;)*"
+>
+<!ENTITY % faq-short-answer.attributes
+              "%univ-atts;
+               outputclass
+                          CDATA
+                                    #IMPLIED"
+>
+<!ELEMENT  faq-short-answer %faq-short-answer.content;>
+<!ATTLIST  faq-short-answer %faq-short-answer.attributes;>
+
+
 
 <!--                    LONG NAME: FAQ question statement -->
 <!ENTITY % faq-question-statement.content
@@ -114,7 +130,8 @@
   
 <!ATTLIST  faq-question      %global-atts;  class CDATA "- topic/topic concept/concept faq-question/faq-question ">
 <!ATTLIST  faq-question-statement      %global-atts;  class CDATA "- topic/title  concept/title faq-question/faq-question-statement ">
-<!ATTLIST  faq-answer      %global-atts;  class CDATA "- topic/body  concept/conbody faq-question/faq-answer ">
+<!ATTLIST  faq-short-answer      %global-atts;  class CDATA "- topic/shortdesc  concept/shortdesc faq-question/faq-short-answer ">
+<!ATTLIST  faq-answer-details      %global-atts;  class CDATA "- topic/body  concept/conbody faq-question/faq-answer-details ">
 <!--<!ATTLIST  conbodydiv   %global-atts;  class CDATA "- topic/bodydiv concept/conbodydiv ">-->
 
 <!-- ================== End of DITA Concept ==================== -->

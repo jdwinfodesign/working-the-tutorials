@@ -21,7 +21,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % faq-question-dec     
-  PUBLIC "urn:pubid:example.org:doctypes:dita:modules:entities:faq-question.ent" 
+  PUBLIC "faq-question.ent" 
          "faq-question.ent"
 >%faq-question-dec;
 
@@ -216,19 +216,16 @@
 <!ENTITY % topic-type
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Topic//EN"
          "../../base/dtd/topic.mod"
->
-%topic-type;
+>%topic-type;
 
 <!ENTITY % concept-type
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Concept//EN"
          "concept.mod"
->
-%concept-type;
+>%concept-type;
 
 <!ENTITY % faq-question-type 
-  PUBLIC "urn:pubid:example.org:doctypes:dita:modules:faq-question.mod"
-  "faq-question.mod"
->
+  SYSTEM "faq-question.mod"                                                        
+ >                                                     
 %faq-question-type;
 
 <!-- ============================================================= -->

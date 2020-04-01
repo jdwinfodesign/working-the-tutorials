@@ -1,9 +1,7 @@
 <?xml version="1.0"?>          
-<!DOCTYPE faq-question 
-  PUBLIC "urn:pubid:example.org:doctypes:dita:faq-question" 
-         "bogus"
->          
-<faq-question id="question-id">
+<faq-question 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:pubid:example.org:doctypes:dita:faq-question.xsd" id="question-id">
 	<faq-question-statement>Can I add attributes to specific element types?</faq-question-statement>
 	<faq-short-answer>No, you can only define global attributes, specialized either from @base
 		or @props.</faq-short-answer>
