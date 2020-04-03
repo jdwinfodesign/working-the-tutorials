@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng"
+                         schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+	xmlns="http://relaxng.org/ns/structure/1.0"
+	xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+		<moduleTitle>DITA FAQ Question</moduleTitle>
+		<headerComment xml:space="preserve"><![CDATA[
+=============================================================
+                   HEADER                                    
+=============================================================
+                         
+=============================================================
+]]></headerComment>
+		<moduleMetadata>
+			<moduleType>topic</moduleType>
+			<moduleShortName>faq-question</moduleShortName>
+			<modulePublicIds>
+				<dtdMod>-//OASIS//ELEMENTS DITA<var presep=" " name="ditaver"/> faq-question//EN</dtdMod>
+				<dtdEnt>-//OASIS//ENTITIES DITA<var presep=" " name="ditaver"/> faq-question//EN</dtdEnt>
+				<xsdMod>urn:oasis:names:tc:dita:xsd:faq-questionMod.xsd<var presep=":" name="ditaver"
+					/></xsdMod>
+				<xsdGrp>urn:oasis:names:tc:dita:xsd:faq-questionGrp.xsd<var presep=":" name="ditaver"
+					/></xsdGrp>
+				<rncMod>urn:oasis:names:tc:dita:rnc:faq-questionMod.rnc<var presep=":" name="ditaver"
+					/></rncMod>
+				<rngMod>urn:oasis:names:tc:dita:rng:faq-questionMod.rng<var presep=":" name="ditaver"
+					/></rngMod>
+			</modulePublicIds>
+			<domainsContribution>(topic faq-question)</domainsContribution>
+		</moduleMetadata>
+	</moduleDesc>
+	<div>
+		<a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+
+		<define name="faq-question-info-types">
+			<ref name="info-types"/>
+		</define>
+
+	</div>
+	<div>
+		<a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+		<define name="faq-question">
+			<ref name="faq-question.element"/>
+		</define>
+
+		<define name="faq-question-statement">
+			<ref name="faq-question-statement.element"/>
+		</define>
+
+		<define name="faq-short-answer">
+			<ref name="faq-short-answer.element"/>
+		</define>
+
+		<define name="faq-answer-details">
+			<ref name="faq-answer-details.element"/>
+		</define>
+	</div>
+	<div>
+		<a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+		<div>
+			<a:documentation> LONG NAME: FAQ Question </a:documentation>
+			<define name="faq-question.content">
+				<ref name="faq-question-statement"/>
+				<optional>
+					<ref name="titlealts"/>
+				</optional>
+				<optional>
+					<choice>
+						<ref name="faq-short-answer"/>
+					</choice>
+				</optional>
+				<optional>
+					<ref name="prolog"/>
+				</optional>
+				<optional>
+					<ref name="faq-answer-details"/>
+				</optional>
+				<optional>
+					<ref name="related-links"/>
+				</optional>
+				<zeroOrMore>
+					<ref name="faq-question-info-types"/>
+				</zeroOrMore>
+			</define>
+			<define name="faq-question.attributes">
+				<attribute name="id">
+					<data type="ID"/>
+				</attribute>
+				<ref name="conref-atts"/>
+				<ref name="select-atts"/>
+				<ref name="localization-atts"/>
+				<optional>
+					<attribute name="outputclass"/>
+				</optional>
+			</define>
+			<define name="faq-question.element">
+				<element name="faq-question" dita:longName="faq-question">
+					<a:documentation>The &lt;concept> element is the top-level element for a topic that
+						answers the question what is? Concepts provide background information that users must
+						know before they can successfully work with a product or interface. Often, a concept is
+						an extended definition of a major abstraction such as a process or function. It might
+						also have an example or a graphic, but generally the structure of a concept is fairly
+						simple. Category: Concept elements</a:documentation>
+					<ref name="faq-question.attlist"/>
+					<ref name="faq-question.content"/>
+				</element>
+			</define>
+			<define name="faq-question.attlist" combine="interleave">
+				<ref name="faq-question.attributes"/>
+				<ref name="arch-atts"/>
+				<ref name="domains-att"/>
+			</define>
+			<define name="idElements" combine="choice">
+				<ref name="faq-question.element"/>
+			</define>
+		</div>
+		<!-- title from commonElementsMod.rng becomes faq-question-statement -->
+		<div>
+			<a:documentation>LONG NAME: FAQ Question statement</a:documentation>
+			<define name="faq-question-statement.content">
+				<a:documentation>This is referenced inside CALS table</a:documentation>
+				<zeroOrMore>
+					<ref name="title.cnt"/>
+				</zeroOrMore>
+			</define>
+			<define name="faq-question-statement.attributes">
+				<ref name="id-atts"/>
+				<ref name="localization-atts"/>
+				<optional>
+					<attribute name="base"/>
+				</optional>
+				<ref name="base-attribute-extensions"/>
+				<optional>
+					<attribute name="outputclass"/>
+				</optional>
+				<optional>
+					<attribute name="rev" dita:since="1.3"/>
+				</optional>
+			</define>
+			<define name="faq-question-statement.element">
+				<element name="faq-question-statement" dita:longName="FAQ Question Statement">
+					<a:documentation>The &lt;faq-question-statement> element ... Category: Topic
+						elements</a:documentation>
+					<ref name="faq-question-statement.attlist"/>
+					<ref name="faq-question-statement.content"/>
+				</element>
+			</define>
+			<define name="faq-question-statement.attlist" combine="interleave">
+				<ref name="faq-question-statement.attributes"/>
+			</define>
+		</div>
+		<!-- =============================================================== -->
+		<div>
+			<a:documentation>LONG NAME: FAQ Short Answer</a:documentation>
+			<define name="faq-short-answer.content">
+				<zeroOrMore>
+					<choice>
+						<ref name="title.cnt"/>
+						<ref name="xref" dita:since="1.3"/>
+					</choice>
+				</zeroOrMore>
+			</define>
+			<define name="faq-short-answer.attributes">
+				<ref name="univ-atts"/>
+				<optional>
+					<attribute name="outputclass"/>
+				</optional>
+			</define>
+			<define name="faq-short-answer.element">
+				<element name="faq-short-answer" dita:longName="Short Description">
+					<a:documentation>The short description (&lt;faq-short-answer>) element occurs between the
+						topic title and the topic body, as the initial paragraph-like content of a topic, or it
+						can be embedded in an abstract element. The short description, which represents the
+						purpose or theme of the topic, is also intended to be used as a link preview and for
+						searching. When used within a DITA map, the short description of the &lt;topicref> can
+						be used to override the short description in the topic. Category: Topic
+						elements</a:documentation>
+					<ref name="faq-short-answer.attlist"/>
+					<ref name="faq-short-answer.content"/>
+				</element>
+			</define>
+			<define name="faq-short-answer.attlist" combine="interleave">
+				<ref name="faq-short-answer.attributes"/>
+			</define>
+		</div>
+		<!-- =============================================================== -->
+		<div>
+			<a:documentation> LONG NAME: faq-question Body </a:documentation>
+			<define name="faq-answer-details.content">
+				<zeroOrMore>
+					<ref name="body.cnt"/>
+				</zeroOrMore>
+				<zeroOrMore>
+					<choice>
+						<ref name="section"/>
+						<ref name="example"/>
+						<!--            <ref name="conbodydiv"/>-->
+					</choice>
+				</zeroOrMore>
+			</define>
+			<define name="faq-answer-details.attributes">
+				<ref name="id-atts"/>
+				<ref name="localization-atts"/>
+				<optional>
+					<attribute name="base"/>
+				</optional>
+				<ref name="base-attribute-extensions"/>
+				<optional>
+					<attribute name="outputclass"/>
+				</optional>
+			</define>
+			<define name="faq-answer-details.element">
+				<element name="faq-answer-details" dita:longName="Concept Body">
+					<a:documentation>The &lt;faq-answer-details> element is the main body-level element for a
+						concept. Like the &lt;body> element of a general &lt;topic>, &lt;faq-answer-details>
+						allows paragraphs, lists, and other elements as well as sections and examples. But
+						&lt;faq-answer-details> has a constraint that a section or an example can be followed
+						only by other sections or examples. Category: Concept elements</a:documentation>
+					<ref name="faq-answer-details.attlist"/>
+					<ref name="faq-answer-details.content"/>
+				</element>
+			</define>
+			<define name="faq-answer-details.attlist" combine="interleave">
+				<ref name="faq-answer-details.attributes"/>
+			</define>
+		</div>
+	</div>
+	
+	<div>
+		<a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+		<define name="faq-question.attlist" combine="interleave">
+			<ref name="global-atts"/>
+			<optional>
+				<attribute name="class"
+					a:defaultValue="- topic/topic concept/concept faq-question/faq-question "/>
+			</optional>
+		</define>
+		<define name="faq-question-statement.attlist" combine="interleave">
+			<ref name="global-atts"/>
+			<optional>
+				<attribute name="class"
+					a:defaultValue="- topic/title     concept/title     faq-question/faq-question-statement "
+				/>
+			</optional>
+		</define>
+		<define name="faq-short-answer.attlist" combine="interleave">
+			<ref name="global-atts"/>
+			<optional>
+				<attribute name="class"
+					a:defaultValue="- topic/shortdesc concept/shortdesc faq-question/faq-short-answer "/>
+			</optional>
+		</define>
+		<define name="faq-answer-details.attlist" combine="interleave">
+			<ref name="global-atts"/>
+			<optional>
+				<attribute name="class"
+					a:defaultValue="- topic/body      concept/conbody   faq-question/faq-answer-details "/>
+			</optional>
+		</define>
+	</div>
+</grammar>
