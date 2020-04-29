@@ -28,16 +28,16 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>package-plugin/mytopic-test-dtd.xml</String>
+                                    <String>topic-spec-tutorial/DTD-syntax/faq-question-test-02.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>Run DITA-OT Integrator - Copy</String>
+                                        <String>DITA HTML5 Specialization XSLT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>ANT</String>
+                                        <String>DITAMAP</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -46,7 +46,62 @@
                     <entry>
                         <String>scenarios</String>
                         <scenario-array>
-                            <antScenario>
+                            <ditaScenario>
+                                <field name="useXEP">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useAntennaHouse">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="baseDir">
+                                    <String>${cfd}</String>
+                                </field>
+                                <field name="outputDir">
+                                    <String>${cfd}/out/topic-html5</String>
+                                </field>
+                                <field name="tempDir">
+                                    <String>${cfd}/temp/topic-html5</String>
+                                </field>
+                                <field name="transtype">
+                                    <String>html5</String>
+                                </field>
+                                <field name="filters">
+                                    <ditavalFilters>
+                                        <field name="useDitavalFilePath">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="useAppliedConditionSet">
+                                            <Boolean>true</Boolean>
+                                        </field>
+                                        <field name="appliedConditionSet">
+                                            <null/>
+                                        </field>
+                                        <field name="ditavalFilePath">
+                                            <null/>
+                                        </field>
+                                        <field name="simpleFiltersList">
+                                            <list/>
+                                        </field>
+                                    </ditavalFilters>
+                                </field>
+                                <field name="addOxygenJars">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="skinCssFile">
+                                    <null/>
+                                </field>
+                                <field name="lastCustomSkinCssPath">
+                                    <null/>
+                                </field>
+                                <field name="webhelpResponsiveTemplate">
+                                    <null/>
+                                </field>
+                                <field name="publishingTemplateDataPO">
+                                    <null/>
+                                </field>
+                                <field name="oxygenFeedbackPO">
+                                    <null/>
+                                </field>
                                 <field name="additionalAntArgs">
                                     <String></String>
                                 </field>
@@ -54,25 +109,55 @@
                                     <String></String>
                                 </field>
                                 <field name="buildFilePath">
-                                    <String>${configured.ditaot.dir}/integrator.xml</String>
+                                    <String></String>
                                 </field>
                                 <field name="ditaParams">
                                     <list>
-                                        <antParameter>
+                                        <ditaParameter>
                                             <field name="name">
-                                                <String>strict</String>
+                                                <String>args.copycss</String>
                                             </field>
                                             <field name="description">
-                                                <String></String>
+                                                <null/>
                                             </field>
                                             <field name="value">
-                                                <String>true</String>
+                                                <String>yes</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <String>no</String>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>4</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <String-array>
+                                                    <String>yes</String>
+                                                    <String>no</String>
+                                                    <null/>
+                                                </String-array>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <String-array>
+                                                    <String></String>
+                                                    <String></String>
+                                                </String-array>
+                                            </field>
+                                        </ditaParameter>
+                                        <ditaParameter>
+                                            <field name="name">
+                                                <String>args.css</String>
+                                            </field>
+                                            <field name="description">
+                                                <null/>
+                                            </field>
+                                            <field name="value">
+                                                <String>faq-question.css</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
                                             </field>
                                             <field name="type">
-                                                <Integer>5</Integer>
+                                                <Integer>0</Integer>
                                             </field>
                                             <field name="possibleValues">
                                                 <null/>
@@ -80,11 +165,87 @@
                                             <field name="possibleValuesDescriptions">
                                                 <null/>
                                             </field>
-                                        </antParameter>
+                                        </ditaParameter>
+                                        <ditaParameter>
+                                            <field name="name">
+                                                <String>args.csspath</String>
+                                            </field>
+                                            <field name="description">
+                                                <null/>
+                                            </field>
+                                            <field name="value">
+                                                <String>css</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <null/>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>0</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </ditaParameter>
+                                        <ditaParameter>
+                                            <field name="name">
+                                                <String>args.cssroot</String>
+                                            </field>
+                                            <field name="description">
+                                                <null/>
+                                            </field>
+                                            <field name="value">
+                                                <String>${configured.ditaot.dir}/plugins/org.example.faq-question.html/css</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <null/>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>0</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </ditaParameter>
+                                        <ditaParameter>
+                                            <field name="name">
+                                                <String>clean.temp</String>
+                                            </field>
+                                            <field name="description">
+                                                <null/>
+                                            </field>
+                                            <field name="value">
+                                                <String>no</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <String>yes</String>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>4</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <String-array>
+                                                    <String>yes</String>
+                                                    <String>no</String>
+                                                    <null/>
+                                                </String-array>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <String-array>
+                                                    <String></String>
+                                                    <String></String>
+                                                </String-array>
+                                            </field>
+                                        </ditaParameter>
                                     </list>
                                 </field>
                                 <field name="jvmArgs">
-                                    <String>-Xmx256m</String>
+                                    <String>-Xmx384m</String>
                                 </field>
                                 <field name="useCustomJavaHome">
                                     <Boolean>false</Boolean>
@@ -99,7 +260,7 @@
                                     <String></String>
                                 </field>
                                 <field name="workingDir">
-                                    <String>${pd}/dita-ot-3.3.4</String>
+                                    <null/>
                                 </field>
                                 <field name="showConsoleAlways">
                                     <Boolean>true</Boolean>
@@ -108,7 +269,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>Run DITA-OT Integrator - Copy</String>
+                                    <String>DITA HTML5 Specialization XSLT</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
@@ -138,19 +299,19 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="type">
-                                    <String>ANT</String>
+                                    <String>DITAMAP</String>
                                 </field>
                                 <field name="saveAs">
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="openInBrowser">
-                                    <Boolean>false</Boolean>
+                                    <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
                                     <null/>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="locationToOpenInBrowserURL">
                                     <String></String>
@@ -180,30 +341,12 @@
                                     <String-array/>
                                 </field>
                                 <field name="xslTransformer">
-                                    <String>ANT</String>
+                                    <String>DITA-OT</String>
                                 </field>
                                 <field name="extensionURLs">
-                                    <String-array>
-                                        <String>${configured.ditaot.dir.url}/config/</String>
-                                        <String>${oxygenHome}/classes/</String>
-                                        <String>${oxygenHome}/lib/oxygen.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenAuthor.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenDeveloper.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenEclipse.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenAuthorEclipse.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenDeveloperEclipse.jar</String>
-                                        <String>${oxygenHome}/lib/oxygen-basic-utilities.jar</String>
-                                        <String>${oxygenHome}/lib/oxygen-editor-variables-parser.jar</String>
-                                        <String>${oxygenHome}/lib/*resolver*.jar</String>
-                                        <String>${oxygenHome}/lib/xml-apis.jar</String>
-                                        <String>${oxygenHome}/lib/*xerces*.jar</String>
-                                        <String>${oxygenHome}/lib/*saxon*9*.jar</String>
-                                        <String>${oxygenHome}/lib/log4j.jar</String>
-                                        <String>${configured.ditaot.dir.url}/plugins/com.oxygenxml.dost.patches/lib/*.jar</String>
-                                        <String>${configured.ditaot.dir.url}/lib/*.jar</String>
-                                    </String-array>
+                                    <String-array/>
                                 </field>
-                            </antScenario>
+                            </ditaScenario>
                         </scenario-array>
                     </entry>
                     <entry>

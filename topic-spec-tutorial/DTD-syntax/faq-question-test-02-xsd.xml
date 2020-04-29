@@ -1,0 +1,17 @@
+<?xml version="1.0"?>          
+<faq-question 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../XSD-syntax/xsd/faq-question.xsd"
+	id="question-id">
+	<faq-question-statement>Can I add attributes to specific element types?</faq-question-statement>
+	<faq-short-answer>No, you can only define global attributes, specialized either from @base
+		or @props.</faq-short-answer>
+	<faq-answer-details>
+		<p>As of DITA 1.2, there is no mechanism for defining new attributes for specific element types.
+			The problem is that there is no DITA-defined syntax for declaring a given attribute as being
+			an attribute that should be recognized as such by a DITA-aware processor and not just some
+			random attribute that was allowed in error (as the DITA architecture otherwise does not 
+			allow non-DITA-defined attributes.</p>
+		<p>Providing this ability is a booked feature request for DITA.</p>
+	</faq-answer-details>
+</faq-question>

@@ -1,0 +1,18 @@
+/*
+
+  CSS for FAQ questions
+  
+  Copyright (c) 2020 Your Name Here
+
+ */
+ 
+ *[class = 'faq-short-answer-a'] {
+  font-family: sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+*[class = 'faq-short-answer'] {
+  font-family: sans-serif;
+  font-size: 14pt;
+}

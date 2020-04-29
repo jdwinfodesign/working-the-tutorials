@@ -1,0 +1,15 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="faq-question"><meta name="description" content="No, you can only define global attributes, specialized either from @base or @props."><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="question-id"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/faq-question.css"><title>Can I add attributes to specific element types?</title></head><body id="question-id"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title faq-question-statement topictitle1" id="ariaid-title1"><div xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot" class="faq-question-statement" style="background-color: #FFFFA0"><span class="faq-question-statement-q">Q. </span>Can I add attributes to specific element types?</div></h1>
+	
+	<div xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot" class="body conbody faq-answer-details"><div class="faq-short-answer"><span class="faq-short-answer-a">A. </span>No, you can only define global attributes, specialized either from @base
+		or @props.</div><div class="faq-answer-details">
+		<p class="p">As of DITA 1.2, there is no mechanism for defining new attributes for specific element types.
+			The problem is that there is no DITA-defined syntax for declaring a given attribute as being
+			an attribute that should be recognized as such by a DITA-aware processor and not just some
+			random attribute that was allowed in error (as the DITA architecture otherwise does not 
+			allow non-DITA-defined attributes.</p>
+		<p class="p">Providing this ability is a booked feature request for DITA.</p>
+	</div></div>
+</article></main></body></html>
