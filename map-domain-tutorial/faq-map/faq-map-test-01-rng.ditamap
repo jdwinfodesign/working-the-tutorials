@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="rng/faq-map.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<faq-map>
+	<title>FAQ Map Test 01</title>
+	<topicmeta/>
+	<keydef keys="foo"/>
+	<faq-question-set>
+		<faq-question/>
+	</faq-question-set>
+</faq-map>
