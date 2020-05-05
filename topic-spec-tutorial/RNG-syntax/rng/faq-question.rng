@@ -4,22 +4,20 @@
                          schematypens="http://relaxng.org/ns/structure/1.0"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
-    <moduleTitle>DITA Concept Shell</moduleTitle>
+    <moduleTitle>DITA FAQ Question</moduleTitle>
     <headerComment xml:space="preserve">
 =============================================================
                    HEADER                                    
 =============================================================
-
-=============================================================
   </headerComment>
     <moduleMetadata>
       <moduleType>topicshell</moduleType>
-      <moduleShortName>concept</moduleShortName>
+      <moduleShortName>faq-question</moduleShortName>
       <shellPublicIds>
-        <dtdShell>-//OASIS//DTD DITA<var presep=" " name="ditaver"/> Concept//EN</dtdShell>
-        <rncShell>urn:oasis:names:tc:dita:rnc:concept.rnc<var presep=":" name="ditaver"/></rncShell>
-        <rngShell>urn:oasis:names:tc:dita:rng:concept.rng<var presep=":" name="ditaver"/></rngShell>
-        <xsdShell>urn:oasis:names:tc:dita:xsd:concept.xsd<var presep=":" name="ditaver"/></xsdShell>
+        <dtdShell>-//OASIS//DTD DITA<var presep=" " name="ditaver"/> faq-question//EN</dtdShell>
+        <rncShell>urn:oasis:names:tc:dita:rnc:faq-question.rnc<var presep=":" name="ditaver"/></rncShell>
+        <rngShell>urn:oasis:names:tc:dita:rng:faq-question.rng<var presep=":" name="ditaver"/></rngShell>
+        <xsdShell>urn:oasis:names:tc:dita:xsd:faq-question.xsd<var presep=":" name="ditaver"/></xsdShell>
       </shellPublicIds>
     </moduleMetadata>
   </moduleDesc>
@@ -27,7 +25,7 @@
   <div>
     <a:documentation>ROOT ELEMENT DECLARATION</a:documentation>
     <start>
-      <ref name="concept.element"/>
+      <ref name="faq-question.element"/>
     </start>
   </div>
   <div>
@@ -35,7 +33,8 @@
     <define name="domains-att" combine="interleave">
       <optional>
         <attribute name="domains"
-          a:defaultValue="(topic abbrev-d)
+        	a:defaultValue="(topic faq-question)
+          							 (topic abbrev-d)
                          (topic concept)
                          (topic equation-d)
                          (topic hazard-d)
@@ -54,31 +53,32 @@
         />
       </optional>
     </define>
-
   </div>
   <div>
     <a:documentation>MODULE INCLUSIONS</a:documentation>
-    <include href="../../base/rng/topicMod.rng"/>
-    <include href="conceptMod.rng">
-      <define name="concept-info-types">
-        <ref name="concept.element"/>
-      </define>
-    </include>
-    <include href="abbreviateDomain.rng"/>
-    <include href="../../base/rng/deliveryTargetAttDomain.rng" dita:since="1.3"/>
-    <include href="equationDomain.rng" dita:since="1.3"/>
-    <include href="../../base/rng/hazardstatementDomain.rng"/>
-    <include href="../../base/rng/highlightDomain.rng"/>
-    <include href="../../base/rng/indexingDomain.rng"/>
-    <include href="markupDomain.rng" dita:since="1.3"/>
-    <include href="mathmlDomain.rng" dita:since="1.3"/>
-    <include href="programmingDomain.rng"/>
-    <include href="releaseManagementDomain.rng" dita:since="1.3"/>
-    <include href="softwareDomain.rng"/>
-    <include href="svgDomain.rng" dita:since="1.3"/>
-    <include href="uiDomain.rng"/>
-    <include href="../../base/rng/utilitiesDomain.rng"/>
-    <include href="xmlDomain.rng"/>
+<!--  	<include href="faq-questionMod.rng"/>-->
+  	
+  	<include href="faq-questionMod.rng">
+  		<define name="faq-question-info-types">
+  			<ref name="faq-question.element"/>
+  		</define>
+  	</include>
+  	<include href="urn:oasis:names:tc:dita:rng:topicMod.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:abbreviateDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:deliveryTargetAttDomain.rng" dita:since="1.3"/>
+  	<include href="urn:oasis:names:tc:dita:rng:equationDomain.rng" dita:since="1.3"/>
+  	<include href="urn:oasis:names:tc:dita:rng:hazardDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:highlightDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:indexingDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:markupDomain.rng" dita:since="1.3"/>
+  	<include href="urn:oasis:names:tc:dita:rng:mathmlDomain.rng" dita:since="1.3"/>
+  	<include href="urn:oasis:names:tc:dita:rng:programmingDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:releaseManagementDomain.rng" dita:since="1.3"/>
+  	<include href="urn:oasis:names:tc:dita:rng:softwareDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:svgDomain.rng" dita:since="1.3"/>
+  	<include href="urn:oasis:names:tc:dita:rng:uiDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:utilitiesDomain.rng"/>
+  	<include href="urn:oasis:names:tc:dita:rng:xmlDomain.rng"/>
 
   </div>
   <div>
@@ -90,7 +90,7 @@
           <element>
             <anyName>
               <except>
-                <name>concept</name>
+                <name>faq-question</name>
                 <name>topic</name>
                 <nsName ns="http://www.w3.org/2000/svg"/>
                 <nsName ns="http://www.w3.org/1998/Math/MathML"/>

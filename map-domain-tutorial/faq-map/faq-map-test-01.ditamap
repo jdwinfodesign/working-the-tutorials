@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faq-map 
+  PUBLIC "faq-map" "dtd/faq-map.dtd">
+<faq-map>
+	<title>FAQ Map Test 01</title>
+	<topicmeta></topicmeta>
+	<keydef keys="foo"/>  
+	<faq-question-set>
+<!--		<faq-question href="foo.dita"/>-->
+	</faq-question-set>
+</faq-map>
